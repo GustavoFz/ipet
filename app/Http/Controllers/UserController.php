@@ -7,17 +7,9 @@ use App\User;
 
 class UserController extends Controller
 {
+
     public function create(){
-    	$dados = [
-    		'nome'=>'Gabriel Henrique',
-    		'email'=>'gabrielhenrique@gmail.com',
-    		'password'=>'123456',
-    		'cpf'=>'8979456321',
-    		'sexo'=>'masculino',
-    		'telefone'=>'6919945943',
-    		'celular'=>'6916346964',
-    		'nascimento'=>'1996-10-11',
-    	];
+    	$dados = [];
     	//dd($dados);
     	User::create($dados);
     	}
@@ -30,28 +22,8 @@ class UserController extends Controller
 
 	public function show(){
 		
-	$users = User::all();
-
-	foreach ($users as $user){
-		echo $user->nome."<br>";
-		$animais = $user->animais()->get();
-		echo "<strong>Animais: </strong>";
-		foreach ($animais as $animal) {
-			echo $animal->nome.", ";
-		}
-
-		$servicos = $user->servicos()->get();
-		if($servicos->isNotEmpty()){
-			echo "<strong><br>Serviços: </strong>";
-			foreach ($servicos as $servico) {
-				echo "<br>Tipo de serviço: ";
-				echo $servico->tipo."<br>";
-				echo "Animal atendido: ";
-				echo $servico->animal->nome;
-			}
-		}
-		echo "<hr>";
-		}
+		$users = User::all();
+		return view('users', compact('users'));
     }
 
     public function showOne($id){
