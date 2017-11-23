@@ -2,14 +2,18 @@
 	<p>{{$user->id}}</p>
 	<p>{{$user->nome}}</p>
 
-	Animais:
-	@foreach($user->animais()->get() as $animal)
-		{{$animal->nome.", "}}
-	@endforeach
+	@if($user->servicos()->get()->isNotEmpty())
+		Animais: 
+		@foreach($user->animais()->get() as $animal)
+			{{$animal->nome.", "}}
+		@endforeach
 	<br>
-
-	Serviços: <br>
-
+	@else
+		Animais: Não há animais
+	@endif
+	
+	@if($user->servicos()->get()->isNotEmpty())
+		Serviços: <br>
 		<table border="1px solid" style="text-align: center;">
 			<thead>
 				<th>ID</th>
@@ -25,8 +29,11 @@
 				<td>{{$servico->status}}</td>
 			</tbody>
 		</table>
-
-	@endforeach
+		@endforeach
+	@else
+		<br>
+		Serviços: Não há serviços<br>
+	@endif
 	<br>
 	<hr>
 @endforeach
