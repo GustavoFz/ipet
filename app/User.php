@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'nome', 'email', 'password', 'cpf', 'sexo', 'telefone', 'celular', 'nascimento'
     ];
 
     /**
@@ -26,4 +26,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected $dates = ['nascimento'];
+
+    //O usuario pode ter varios animais
+    public function animais(){
+      return $this->hasMany(Animal::class, 'id_user', 'id');
+    }
+
+    public function servicos(){
+      return $this->hasMany(Servico::class, 'id_user', 'id');
+    }
+
 }
