@@ -26,26 +26,8 @@ class AnimalController extends Controller
         }
 
     public function show(){
-    	
     	$animais = Animal::all();
-
-    	foreach ($animais as $animal) {
-    		echo $animal->id."<br>";
-    		echo $animal->nome."<br>";
-    		echo $animal->user->nome."<br>";
-    		
-    		$servicos = $animal->servicos()->get();
-    		if($servicos->isNotEmpty()){
-    			echo "<strong><br>Serviços: </strong>";
-    			foreach ($servicos as $servico) {
-    			echo "<br>Tipo de serviço: ";
-    			echo $servico->tipo."<br>";
-    			echo "Animal atendido: ";
-    			echo $servico->animal->nome;
-    			}
-    		}
-    		echo "<hr>";
-    	}
+        return view('animais', compact('animais'));
     }
 
 	public function showOne($id){
