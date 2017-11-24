@@ -31,14 +31,7 @@ class ServicoController extends Controller
 	public function show(){
 	$servicos = Servico::all();
 
-	foreach ($servicos as $servico) {
-		echo "ID: ".$servico->id."<br>";
-		echo "Usuario que contratou: ";
-		echo $servico->user->nome."<br>";
-		echo $servico->tipo."<br>";
-		echo $servico->animal->nome."<br>";
-		echo "<hr>";
-		}
+	return view('servicos', compact('servicos'));
 	}
 
 	public function showOne($id){
@@ -59,6 +52,7 @@ class ServicoController extends Controller
 
 	public function update(Request $req ,$id){
         $dados = $req->all();
+        $dados['status'] = 'ATENDIDO';
 
         if(Servico::find($id)){
             Servico::find($id)->update($dados);
@@ -66,6 +60,7 @@ class ServicoController extends Controller
         } else {
             echo "Não existe servico com ID N° ".$id;
         }
+        return redirect()->back();
     }
 
 	public function delete($id){

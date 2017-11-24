@@ -5,7 +5,7 @@
 	@if($user->animais()->get()->isNotEmpty())
 		Animais: 
 		@foreach($user->animais()->get() as $animal)
-			{{$animal->nome.", "}}
+			<a href="{{route('animal.show.one', $animal->id)}}">{{$animal->nome}}</a>, 
 		@endforeach
 	<br>
 	@else
@@ -40,6 +40,3 @@
 	<br>
 	<hr>
 @endforeach
-		
-
-		
