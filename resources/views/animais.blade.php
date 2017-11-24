@@ -1,6 +1,6 @@
     
     @if($animais->isNotEmpty())
-        Serviços: <br>
+        Animais: <br>
         <table border="1px solid" style="text-align: center;">
             <thead>
                 <th>ID</th>
@@ -18,9 +18,9 @@
                 <td>{{$animal->idade}}</td>
                 <td>{{$animal->user->nome}}</td>
                 <td>
-                    <a href="{{route('servico.show.one', $servico->id)}}">Ver detalhes</a> <br>
-                    <form action="{{route('servico.update', $servico->id)}}" method="POST">
-                        <button type="submit">Atualizar status</button>
+                    <a href="{{route('animal.show.one', $animal->id)}}">Ver detalhes</a> <br>
+                    <form action="{{route('animal.update', $animal->id)}}" method="POST">
+                        <button type="submit">Editar animal</button>
                     </form>
                 </td>
             </tbody>
@@ -29,7 +29,7 @@
 
     @else
         <br>
-        Serviços: Não há serviços<br>
+        Animais: Não há animais<br>
     @endif
     <br>
     <hr>
