@@ -12,6 +12,8 @@
 */
 
 Route::get('/', function () {return view('welcome');} );
+Route::get('/index', function () {return view('index');} );
+Route::get('/home', function () {return view('home');} );
 
 /*ROTAS DE USUÁRIO*/
 Route::post('/user/save',['uses'=>'UserController@save']);
