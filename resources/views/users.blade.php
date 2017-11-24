@@ -26,7 +26,7 @@
 			<tbody>
 				<td>{{$servico->id}}</td>
 				<td>{{$servico->tipo}}</td>
-				<td>{{$servico->animal->nome}}</td>
+				<td><a href="{{route('animal.show.one', $servico->animal->id)}}">{{$servico->animal->nome}}</a></td>
 				<td>{{$servico->status}}</td>
 				<td><a href="{{route('servico.show.one', $servico->id)}}">Ver detalhes</a></td>
 			</tbody>
