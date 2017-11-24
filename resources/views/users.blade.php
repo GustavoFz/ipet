@@ -2,14 +2,14 @@
 	<p>{{$user->id}}</p>
 	<p>{{$user->nome}}</p>
 
-	@if($user->servicos()->get()->isNotEmpty())
+	@if($user->animais()->get()->isNotEmpty())
 		Animais: 
 		@foreach($user->animais()->get() as $animal)
 			{{$animal->nome.", "}}
 		@endforeach
 	<br>
 	@else
-		Animais: Não há animais
+		Animais: Não há animais <br>
 	@endif
 	
 	@if($user->servicos()->get()->isNotEmpty())
@@ -20,16 +20,19 @@
 				<th>Tipo</th>
 				<th>Animal atendido</th>
 				<th>Status</th>
+				<th>Ação</th>
 			</thead>
+			@foreach($user->servicos()->get() as $servico)
 			<tbody>
-		@foreach($user->servicos()->get() as $servico)
 				<td>{{$servico->id}}</td>
 				<td>{{$servico->tipo}}</td>
 				<td>{{$servico->animal->nome}}</td>
 				<td>{{$servico->status}}</td>
+				<td><a href="{{route('servico.show.one', $servico->id)}}">Ver detalhes</a></td>
 			</tbody>
+			@endforeach
 		</table>
-		@endforeach
+
 	@else
 		<br>
 		Serviços: Não há serviços<br>
