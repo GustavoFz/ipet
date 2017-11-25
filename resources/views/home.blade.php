@@ -24,23 +24,125 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-      <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
-        <i class="material-icons">menu</i>
-      </a>
-    </div>
-    <ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0px);">
-        <li class="logo"><a id="logo-container" href="/" class="brand-logo">
-                <object id="front-page-logo" type="image/svg+xml" data="res/materialize.svg">Your browser does not
-                    support SVG
-                </object>
-            </a></li>
-        <li class="bold"><a href="about.html" class="waves-effect waves-teal">opção</a></li>
-        <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">opção</a></li>
-        <li class="bold"><a href="mobile.html" class="waves-effect waves-teal">opção</a></li>
-        <li class="bold"><a href="showcase.html" class="waves-effect waves-teal">opção</a></li>
-        <li class="bold"><a href="themes.html" class="waves-effect waves-teal">opção<span class="new badge"></span></a>
+    <ul id="slide-out" class="side-nav fixed leftside-navigation ps-container ps-active-y"
+        style="transform: translateX(0px);">
+        <li class="user-details cyan darken-2">
+            <div class="row">
+                <div class="col col s4 m4 l4">
+                    <img src="../../images/avatar/avatar-7.png" alt=""
+                         class="circle responsive-img valign profile-image cyan">
+                </div>
+                <div class="col col s8 m8 l8">
+
+                    <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#"
+                       data-activates="profile-dropdown-nav">John Doe<i
+                                class="mdi-navigation-arrow-drop-down right"></i></a>
+                    <ul id="profile-dropdown-nav" class="dropdown-content"
+                        style="white-space: nowrap; position: absolute; top: 59.8px; left: 100.5px; display: none; opacity: 1;">
+                        <li>
+                            <a href="#" class="grey-text text-darken-1">
+                                <i class="material-icons">face</i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#" class="grey-text text-darken-1">
+                                <i class="material-icons">settings</i> Settings</a>
+                        </li>
+                        <li>
+                            <a href="#" class="grey-text text-darken-1">
+                                <i class="material-icons">live_help</i> Help</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" class="grey-text text-darken-1">
+                                <i class="material-icons">lock_outline</i> Lock</a>
+                        </li>
+                        <li>
+                            <a href="#" class="grey-text text-darken-1">
+                                <i class="material-icons">keyboard_tab</i> Logout</a>
+                        </li>
+                    </ul>
+                    <p class="user-roal">Administrator</p>
+                </div>
+            </div>
         </li>
+        <li class="no-padding">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li class="bold active">
+                    <a class="collapsible-header waves-effect waves-cyan active">
+                        <i class="material-icons">dashboard</i>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                    <div class="collapsible-body" style="display: block;">
+                        <ul>
+                            <li>
+                                <a href="dashboard-ecommerce.html">
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                    <span>eCommerce</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="index.html">
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                    <span>Analytics</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="bold">
+                    <a class="collapsible-header waves-effect waves-cyan">
+                        <i class="material-icons">pie_chart_outlined</i>
+                        <span class="nav-text">Charts</span>
+                    </a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a href="charts-chartjs.html">
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                    <span>Chart JS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="charts-chartist.html">
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                    <span>Chartist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="charts-morris.html">
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                    <span>Morris Charts</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="charts-xcharts.html">
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                    <span>xCharts</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="charts-flotcharts.html">
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                    <span>Flot Charts</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="charts-sparklines.html">
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                    <span>Sparkline Charts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;">
+            <div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div>
+        </div>
+        <div class="ps-scrollbar-y-rail" style="top: 0px; height: 712px; right: 3px;">
+            <div class="ps-scrollbar-y" style="top: 0px; height: 367px;"></div>
+        </div>
     </ul>
 </header>
 <main style="padding-left: 300px;">
