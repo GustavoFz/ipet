@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" style="overflow-y: auto">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!--Let browser know website is optimized for mobile-->
@@ -17,6 +17,8 @@
 <body class="blue lighten-5">
 
 <header style="padding-left: 300px;">
+    <!-- Barra Principal -->
+    <!--
     <nav class="top-nav red darken-2">
         <div class="container">
             <div class="nav-wrapper">
@@ -24,7 +26,11 @@
             </div>
         </div>
     </nav>
+    <!-- /Barra Principal -->
+
+    <!-- Barra Lateral -->
     <ul class="side-nav fixed">
+        <!-- Perfil -->
         <li class="red darken-2">
             <div class="row">
                 <div class="col s4 m4 l4" style="padding-top: 15px">
@@ -45,33 +51,38 @@
                         </li>
                         <li>
                             <a href="#" class="grey-text text-darken-1">
-                                <i class="material-icons">settings</i>Opções</a>
+                                <i class="material-icons">settings</i>Opções
+                            </a>
                         </li>
                         <li>
                             <a href="#" class="grey-text text-darken-1">
-                                <i class="material-icons">keyboard_tab</i>Logout</a>
+                                <i class="material-icons">keyboard_tab</i>Logout
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </li>
+        <!-- /Perfil -->
+
+        <!-- Menu Opções -->
         <li class="no-padding">
             <ul class="collapsible" data-collapsible="accordion">
                 <li class="bold">
                     <a class="collapsible-header waves-effect waves-cyan active">
-                        <i class="material-icons">dashboard</i>
+                        <i class="material-icons">star</i>
                         <span class="nav-text">Serviços</span>
                     </a>
                     <div class="collapsible-body">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="#" class="btn_carrega_conteudo" id="cadastro">
                                     <i class="material-icons">keyboard_arrow_right</i>
                                     <span>Banho</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="btn_carrega_conteudo" id="cadastro">
                                     <i class="material-icons">keyboard_arrow_right</i>
                                     <span>Vacinação</span>
                                 </a>
@@ -81,19 +92,19 @@
                 </li>
                 <li class="bold">
                     <a class="collapsible-header waves-effect waves-cyan">
-                        <i class="material-icons">pie_chart_outlined</i>
+                        <i class="material-icons">pets</i>
                         <span class="nav-text">Animais</span>
                     </a>
                     <div class="collapsible-body">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="#" class="btn_carrega_conteudo" id="animals">
                                     <i class="material-icons">keyboard_arrow_right</i>
-                                    <span>Chart JS</span>
+                                    <span>Meu Animais</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="charts-sparklines.html">
+                                <a href="#" class="btn_carrega_conteudo" id="cadastro">
                                     <i class="material-icons">keyboard_arrow_right</i>
                                     <span>Sparkline Charts</span>
                                 </a>
@@ -103,16 +114,17 @@
                 </li>
             </ul>
         </li>
+        <!-- /Menu Opções -->
     </ul>
+    <!-- /Barra Lateral -->
 </header>
 <main style="padding-left: 300px;">
     <div class="section" style="padding-right: 10px; padding-left: 10px">
         <div class="row">
-            <div id="conteudo-home"class="col s12 blue lighten-1">
-                hggjhjhjgjgjgjgjgj
+            <div id="conteudo-home" class="col s12 blue lighten-1">
+                Visualização padão
             </div>
         </div>
-
     </div>
 </main>
 

@@ -1,4 +1,7 @@
-    
+
+<a class="btn waves-effect waves-light black-text" href="#">
+    Adicionar Animal
+</a>
     @if($animais->isNotEmpty())
         Animais: <br>
         <table border="1px solid" style="text-align: center;">
@@ -31,5 +34,38 @@
         <br>
         Animais: Não há animais<br>
     @endif
-    <br>
-    <hr>
+
+
+    <div class="section">
+        <div class="row">
+            <div class="col s12">
+                <div class="card-panel">
+                    <h4 class="header2">Cadastre um Animal</h4>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="name" type="text" style="cursor: pointer;">
+                                    <label for="first_name">Nome</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="message" class="materialize-textarea"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <button class="btn cyan waves-effect waves-light right" type="submit" name="action">
+                                            Submit
+                                            <i class="material-icons right">send</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>Starter Template - Materialize</title>
 
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <!-- Custom CSS -->
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
 <div id="basic-form" class="section">
     <div class="row">
         <div class="col s12 m12 l6">
@@ -103,11 +89,3 @@
         </div>
     </div>
 </div>
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/materialize.js"></script>
-<!-- Custom Script -->
-<script src="js/init.js"></script>
-
-</body>
-</html>

@@ -11,13 +11,13 @@ $(document).ready(function(){
     $('.btn_carrega_conteudo').click(function () {
 
         var carrega_url = this.id;
-        carrega_url = carrega_url+'.php';
+        carrega_url = carrega_url;
 
         $.ajax({
 
             url: carrega_url,
             success: function (data) {
-                $('#div_conteudo').html(data);
+                $('#conteudo-home').html(data);
             },
 
             beforeSend: function () {
