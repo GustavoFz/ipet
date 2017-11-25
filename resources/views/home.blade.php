@@ -31,25 +31,25 @@
                     <img src="img/perfil.svg" class="circle cyan">
                 </div>
                 <div class="col s8 m8 l8" style="padding-top: 30px">
-                    <a class="btn-flat dropdown-button waves-effect waves-light red-text white" href="#"
+                    <a class="btn-flat dropdown-button waves-effect waves-light black-text white" href="#"
                        data-activates="profile-dropdown-nav">
-                        John Doe
-                        <i class="mdi-navigation-arrow-drop-down right"></i>
+                        Andrhé
+                        <i class="material-icons right">keyboard_arrow_down</i>
                     </a>
                     <ul id="profile-dropdown-nav" class="dropdown-content"
                         style="white-space: nowrap; position: absolute; top: 59.8px; left: 100.5px; display: none; opacity: 1;">
                         <li>
                             <a href="#" class="grey-text text-darken-1">
-                                <i class="material-icons">face</i> Profile
+                                <i class="material-icons">face</i>Perfil
                             </a>
                         </li>
                         <li>
                             <a href="#" class="grey-text text-darken-1">
-                                <i class="material-icons">settings</i> Settings</a>
+                                <i class="material-icons">settings</i>Opções</a>
                         </li>
                         <li>
                             <a href="#" class="grey-text text-darken-1">
-                                <i class="material-icons">keyboard_tab</i> Logout</a>
+                                <i class="material-icons">keyboard_tab</i>Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -67,13 +67,13 @@
                             <li>
                                 <a href="#">
                                     <i class="material-icons">keyboard_arrow_right</i>
-                                    <span>eCommerce</span>
+                                    <span>Banho</span>
                                 </a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="#">
                                     <i class="material-icons">keyboard_arrow_right</i>
-                                    <span>Analytics</span>
+                                    <span>Vacinação</span>
                                 </a>
                             </li>
                         </ul>
@@ -106,9 +106,9 @@
     </ul>
 </header>
 <main style="padding-left: 300px;">
-    <div class="section">
+    <div class="section" style="padding-right: 10px; padding-left: 10px">
         <div class="row">
-            <div class="col 12">
+            <div id="conteudo-home"class="col s12 blue lighten-1">
                 hggjhjhjgjgjgjgjgj
             </div>
         </div>
