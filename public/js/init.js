@@ -1,12 +1,12 @@
-(function($){
-  $(function(){
+(function ($) {
+    $(function () {
+        $('.button-collapse').sideNav();
+    });
+})(jQuery);
 
-    $('.button-collapse').sideNav();
 
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
-
-$(document).ready(function(){
+// ATIVADOR MODAL E CARREGAMENTO AJAX COM LOADER
+$(document).ready(function () {
     $('#modal-login').modal();
     $('.btn_carrega_conteudo').click(function () {
 
@@ -21,11 +21,11 @@ $(document).ready(function(){
             },
 
             beforeSend: function () {
-                $('loader').css({display:"block"})
+                $('#loader').css({display: "block"})
             },
 
             complete: function () {
-                $('loader').css({display:"none  "})
+                $('#loader').css({display: "none"})
             }
         })
     })

@@ -18,6 +18,7 @@
 <nav class="nav-extended red custon-nav" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" href="#" class="brand-logo">IPet</a>
+        <i
         <ul class="right hide-on-med-and-down">
             <li>
                 <a class="white-text" href="#">Solicitar Serviço</a>

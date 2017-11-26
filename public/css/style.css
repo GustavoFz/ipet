@@ -1,35 +1,8 @@
 /* Navbar*/
 
-.custon-nav{
-    padding-bottom: 8px;
-    padding-top: 8px;
-}
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-	font-size: inherit;
-}
-.logo-ipet {
-    height: 60px;
-}
-.preloader-background {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* BARRA DE CARREGAME */
 
-    z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-.modal-custom-login{
-    max-height: 90%;
-}
 body {
     display: flex;
     min-height: 100vh;
@@ -38,6 +11,19 @@ body {
 
 main {
     flex: 1 0 auto;
+    padding-left: 300px;
+}
+header{
+    padding-left: 300px;
+}
+@media only screen and (max-width: 600px) {
+    .main{
+        padding-left: 0;
+    }
+    .header{
+        padding-left: 0;
+    }
+
 }
 
 

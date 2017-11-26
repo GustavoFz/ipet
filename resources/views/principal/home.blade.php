@@ -14,9 +14,14 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 
-<body class="blue lighten-5">
+<body>
 
-<header style="padding-left: 300px;">
+<header>
+    <div class="container">
+        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
+            <i class="material-icons">menu</i>
+        </a>
+    </div>
     <!-- Barra Principal -->
     <!--
     <nav class="top-nav red darken-2">
@@ -29,7 +34,7 @@
     <!-- /Barra Principal -->
 
     <!-- Barra Lateral -->
-    <ul class="side-nav fixed">
+    <ul id="nav-mobile" class="side-nav fixed">
         <!-- Perfil -->
         <li class="red darken-2">
             <div class="row">
@@ -118,11 +123,16 @@
     </ul>
     <!-- /Barra Lateral -->
 </header>
-<main style="padding-left: 300px;">
+<main>
     <div class="section" style="padding-right: 10px; padding-left: 10px">
         <div class="row">
-            <div id="conteudo-home" class="col s12 blue lighten-1">
-                Visualização padão
+            <div id="conteudo-home" class="col s12">
+                <!-- Barra de Carregamento -->
+                <div id="loader" class="progress" style="display: none">
+                    <div class="indeterminate"></div>
+                </div>
+                <!-- /Barra de Carregamento -->
+sasasasasasasas
             </div>
         </div>
     </div>
