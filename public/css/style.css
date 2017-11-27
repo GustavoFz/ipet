@@ -25,5 +25,9 @@ header{
     }
 
 }
-
+/* LOGO */
+.logo {
+    background: url(img/logo-preta.svg);
+    background: fixed;
+}
 

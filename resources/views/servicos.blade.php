@@ -1,3 +1,6 @@
+<a class="btn waves-effect waves-light modal-trigger black-text" href="#modal-servico">
+    Solicitar uma Serviço
+</a>
 @if($servicos->isNotEmpty())
     Serviços: <br>
     <table border="1px solid" style="text-align: center;">

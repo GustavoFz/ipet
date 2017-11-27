@@ -17,7 +17,9 @@
 <body class="white">
 <nav class="nav-extended red custon-nav" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">IPet</a>
+        <a id="logo-container" href="/" class="logo">IPet
+
+        </a>
         <ul class="right hide-on-med-and-down">
             <li>
                 <a class="white-text modal-trigger" href="#modal-servico">Solicitar Serviços</a>
@@ -32,7 +34,10 @@
                 <a class="waves-effect waves-light btn modal-trigger black yellow-text" href="#modal-login">Login</a>
             </li>
         </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse  "><i class="material-icons white-text">menu</i></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse  ">
+            <i class="material-icons white-text">menu
+            </i>
+        </a>
     </div>
 </nav>
 
@@ -72,32 +77,36 @@
     <div class="modal-content">
         <div id="login" class="col s12">
             <h4 class="center-align">Login</h4>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">person</i>
-                    <input id="email" name="email" type="email" class="validate">
-                    <label for="email">Email</label>
+            <form action="" method="post">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">person</i>
+                        <input id="email" name="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">lock</i>
-                    <input id="password" name="password" type="password" class="validate">
-                    <label for="password">Password</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="password" name="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col s6">
-                    <a class="btn waves-effect waves-light yellow black-text" href="/registro">Registrar</a>
-                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <a class="btn waves-effect waves-light yellow black-text" href="/registro">Registrar</a>
+                    </div>
 
-                <div class="col s6">
-                    <button class="btn waves-effect waves-light right black yellow-text" type="submit" name="action">
-                        Entrar
-                        <i class="material-icons right">send</i>
-                    </button>
+                    <div class="col s6">
+                        <button class="btn waves-effect waves-light right black yellow-text" type="submit"
+                                name="action">
+                            Entrar
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
@@ -108,34 +117,38 @@
     <div class="modal-content">
         <div id="login" class="col s12">
             <h4 class="center-align">Escolha um ou mais serviços:</h4>
-            <div class="row">
-                <p>
-                    <input type="checkbox" id="opcao1"/>
-                    <label for="opcao1">Banho</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="opcao2"/>
-                    <label for="opcao2">Tosa</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="opcao3"/>
-                    <label for="opcao3">Vacina</label>
-                </p>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Escreva uma Observação</label>
+            <form class="" action="" method="post">
+                {{ csrf_field() }}
+                <div class="row">
+                    <p>
+                        <input type="checkbox" id="opcao1"/>
+                        <label for="opcao1">Banho</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="opcao2"/>
+                        <label for="opcao2">Tosa</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="opcao3"/>
+                        <label for="opcao3">Vacina</label>
+                    </p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <button class="btn waves-effect waves-light right black yellow-text " type="submit" name="action">
-                        Escolhi!
-                        <i class="material-icons right">send</i>
-                    </button>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Escreva uma Observação</label>
+                    </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button class="btn waves-effect waves-light right black yellow-text " type="submit"
+                                name="action">
+                            Escolhi!
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>

@@ -18,7 +18,8 @@
 
 <header>
     <div class="container">
-        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
+        <a href="#" data-activates="nav-mobile"
+           class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
             <i class="material-icons">menu</i>
         </a>
     </div>
@@ -81,15 +82,9 @@
                     <div class="collapsible-body">
                         <ul>
                             <li>
-                                <a href="#" class="btn_carrega_conteudo" id="cadastro">
+                                <a href="#" class="btn_carrega_conteudo" id="servicos">
                                     <i class="material-icons">keyboard_arrow_right</i>
-                                    <span>Banho</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn_carrega_conteudo" id="cadastro">
-                                    <i class="material-icons">keyboard_arrow_right</i>
-                                    <span>Vacinação</span>
+                                    <span>Meus Serviços</span>
                                 </a>
                             </li>
                         </ul>
@@ -106,12 +101,6 @@
                                 <a href="#" class="btn_carrega_conteudo" id="animals">
                                     <i class="material-icons">keyboard_arrow_right</i>
                                     <span>Meu Animais</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn_carrega_conteudo" id="cadastro">
-                                    <i class="material-icons">keyboard_arrow_right</i>
-                                    <span>Sparkline Charts</span>
                                 </a>
                             </li>
                         </ul>
@@ -132,11 +121,94 @@
                     <div class="indeterminate"></div>
                 </div>
                 <!-- /Barra de Carregamento -->
-sasasasasasasas
+                sasasasasasasas
             </div>
         </div>
     </div>
 </main>
+
+<!-- Estrutura dos Modais -->
+<!-- Modal Animal -->
+<div id="modal-animal" class="modal">
+    <div class="modal-content">
+        <div id="login" class="col s12">
+            <h4 class="center-align">Adicione um Pet</h4>
+            <form action="{{route('animal.save')}}" method="post">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input id="name" name="name" type="text" class="validate">
+                        <label for="name">Nome</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input id="especie" name="especie" type="text" class="validate">
+                        <label for="especie">Especie</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input id="idade" name="idade" type="number" class="validate">
+                        <label for="idade">Idade</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button class="btn waves-effect waves-light right black yellow-text" type="submit"
+                                name="action">
+                            Adicionar
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /Modal Animal -->
+
+<!-- Modal Serviço -->
+<div id="modal-servico" class="modal">
+    <div class="modal-content">
+        <div id="login" class="col s12">
+            <h4 class="center-align">Escolha um ou mais serviços:</h4>
+            <form class="" action="" method="post">
+                {{ csrf_field() }}
+                <div class="row">
+                    <p>
+                        <input type="checkbox" id="opcao1"/>
+                        <label for="opcao1">Banho</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="opcao2"/>
+                        <label for="opcao2">Tosa</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="opcao3"/>
+                        <label for="opcao3">Vacina</label>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Escreva uma Observação</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button class="btn waves-effect waves-light right black yellow-text " type="submit"
+                                name="action">
+                            Escolhi!
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /Modal Serviço -->
+
 
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="js/jquery.js"></script>

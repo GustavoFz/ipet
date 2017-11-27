@@ -9,6 +9,7 @@
 $(document).ready(function () {
     $('#modal-login').modal();
     $('#modal-servico').modal();
+    $('#modal-animal').modal();
     $('.btn_carrega_conteudo').click(function () {
 
         var carrega_url = this.id;
