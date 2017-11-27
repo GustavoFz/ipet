@@ -115,12 +115,13 @@
 <main>
     <div class="section" style="padding-right: 10px; padding-left: 10px">
         <div class="row">
+            <!-- Barra de Carregamento -->
+            <div id="loader" class="progress" style="display: none; z-index: inherit">
+                <div class="indeterminate"></div>
+            </div>
+            <!-- /Barra de Carregamento -->
             <div id="conteudo-home" class="col s12">
-                <!-- Barra de Carregamento -->
-                <div id="loader" class="progress" style="display: none">
-                    <div class="indeterminate"></div>
-                </div>
-                <!-- /Barra de Carregamento -->
+
                 sasasasasasasas
             </div>
         </div>
@@ -143,14 +144,17 @@
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">person</i>
-                        <input id="especie" name="especie" type="text" class="validate">
-                        <label for="especie">Especie</label>
+                        <select name="especie">
+                            <option value="" disabled selected>Especie</option>
+                            <option value="cachorro">Cachoroo</option>
+                            <option value="gato">Gato</option>
+                        </select>
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">person</i>
                         <input id="idade" name="idade" type="number" class="validate">
                         <label for="idade">Idade</label>
-                    </div><
+                    </div>
 
                         <input id="id_user" name="id_user" type="hidden" value="1">
                         {{--Deixar assim depois da autenticação <input id="id_user" name="id_user" type="hidden" value="{{user->id}}"> --}}
