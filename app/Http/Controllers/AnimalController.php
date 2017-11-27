@@ -23,6 +23,7 @@ class AnimalController extends Controller
         $dados = $req->all();
         //dd($dados);
         Animal::create($dados);
+        return redirect()->back();
         }
 
     public function show(){

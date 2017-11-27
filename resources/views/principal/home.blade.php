@@ -138,8 +138,8 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">person</i>
-                        <input id="name" name="name" type="text" class="validate">
-                        <label for="name">Nome</label>
+                        <input id="nome" name="nome" type="text" class="validate">
+                        <label for="nome">Nome</label>
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">person</i>
@@ -150,7 +150,10 @@
                         <i class="material-icons prefix">person</i>
                         <input id="idade" name="idade" type="number" class="validate">
                         <label for="idade">Idade</label>
-                    </div>
+                    </div><
+
+                        <input id="id_user" name="id_user" type="hidden" value="1">
+                        {{--Deixar assim depois da autenticação <input id="id_user" name="id_user" type="hidden" value="{{user->id}}"> --}}
                 </div>
                 <div class="row">
                     <div class="col s12">
