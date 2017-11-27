@@ -3,6 +3,10 @@
         $('.button-collapse').sideNav();
     });
 })(jQuery);
+// ATIVADOR CAMPO SELECT
+$(document).ready(function() {
+    $('select').material_select();
+});
 
 
 // ATIVADOR MODAL E CARREGAMENTO AJAX COM LOADER
