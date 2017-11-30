@@ -18,8 +18,4 @@ class Servico extends Model
       return $this->hasOne(Animal::class,'id', 'id_animal');
     }
 
-    public function servico(){
-      return $this->hasOne(Animal::class,'id', 'id_animal');
-    }
-
 }
