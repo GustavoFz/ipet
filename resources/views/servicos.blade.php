@@ -1,6 +1,10 @@
-<a class="btn waves-effect waves-light modal-trigger black-text" href="#modal-servico">
-    Solicitar uma Serviço
-</a>
+<!-- Botão add -->
+<div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="#modal-servico">
+        <i class="large material-icons">add</i>
+    </a>
+</div>
+<!-- /Botão add -->
 @if($servicos->isNotEmpty())
     Serviços: <br>
     <table border="1px solid" style="text-align: center;">

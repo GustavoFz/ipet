@@ -51,13 +51,8 @@
                     <ul id="profile-dropdown-nav" class="dropdown-content"
                         style="white-space: nowrap; position: absolute; top: 59.8px; left: 100.5px; display: none; opacity: 1;">
                         <li>
-                            <a href="#" class="grey-text text-darken-1">
+                            <a href="#" id="perfil" class="btn_carrega_conteudo grey-text text-darken-1">
                                 <i class="material-icons">face</i>Perfil
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="grey-text text-darken-1">
-                                <i class="material-icons">settings</i>Opções
                             </a>
                         </li>
                         <li>
