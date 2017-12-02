@@ -14,24 +14,24 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 
-<body class="white">
-<nav class="nav-extended red custon-nav" role="navigation">
+<body class="grey lighten-4">
+<nav class="nav-extended black custon-nav" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="/" class="logo">IPet
-
+        <a id="logo-container" href="/" class="brand-logo">
+            <img src="img/logo-branca.svg" style="height:55px">
         </a>
         <ul class="right hide-on-med-and-down">
             <li>
                 <a class="white-text modal-trigger" href="#modal-servico">Solicitar Serviços</a>
             </li>
             <li>
-                <a class="waves-effect waves-light btn modal-trigger white red-text" href="#modal-login">Entrar</a>
+                <a class="waves-effect waves-light btn modal-trigger white yellow-text" href="#modal-login">Entrar</a>
             </li>
         </ul>
 
-        <ul id="nav-mobile" class="side-nav">
+        <ul id="nav-mobile" class="side-nav black">
             <li>
-                <a class="waves-effect waves-light btn modal-trigger black yellow-text" href="#modal-login">Login</a>
+                <a class="waves-effect waves-light btn modal-trigger white yellow-text" href="#modal-login">Login</a>
             </li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse  ">
@@ -41,6 +41,30 @@
     </div>
 </nav>
 
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="img/banho.jpg">
+    </div>
+</div>
+<div class="section black">
+    <div class="row container">
+        <h2 class="header white-text">Banho</h2>
+        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this
+            case, is moved at a different speed than the foreground content while scrolling.</p>
+    </div>
+</div>
+
+<div class="parallax-container">
+    <div class="parallax"><img src="img/tosa.jpg"></div>
+</div>
+<div class="section black">
+    <div class="row container">
+        <h2 class="header white-text">Tosa</h2>
+        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this
+            case, is moved at a different speed than the foreground content while scrolling.</p>
+    </div>
+</div>
+
 <div>
     <div class="container">
 
@@ -49,14 +73,12 @@
         </div>
 
     </div>
-    <div class="section blue"
-         style="width:100%; background: url(img/logo-branca.svg) no-repeat; background-size: 350px">
-        foto
+    <div class="section grey" style="background: url(img/banho.jpg) no-repeat;">
         <div class="container">
             <div class="row">
-                <div class="col m8 push-m4">
-                    <div class="m12 white-text" style="margin-bottom: 10px">
-                        <h3>Contrate nosso serviço que iremos até a sua casa buscar seu pet!</h3>
+                <div class="col m8 push-m4 s12">
+                    <div class="col m12 white-text" style="margin-bottom: 10px">
+                        <h3 class="black-text">Contrate nosso serviço que iremos até a sua casa buscar seu pet!</h3>
                     </div>
                     <div class="m12">
                         <div class="center">

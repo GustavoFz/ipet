@@ -1,6 +1,41 @@
-<a class="btn waves-effect waves-light modal-trigger black-text" href="#modal-animal">
-    Adicionar um Pet
-</a>
+<!-- Botão add -->
+<div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="#modal-animal">
+        <i class="large material-icons">add</i>
+    </a>
+</div>
+<!-- /Botão add -->
+
+<div class="row">
+    <div class="col m5">
+        <div class="card">
+            <div class="card-image">
+                <img src="img/logo-preta.svg" style="height: 100px">
+                <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+                <p>Scoob</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col s5">
+    <h2 class="header">Meu animais</h2>
+    <div class="card horizontal">
+        <div class="card-image">
+            <img src="https://lorempixel.com/100/190/nature/6">
+        </div>
+        <div class="card-stacked">
+            <div class="card-content">
+                <h5>Nome:</h5>
+                <h5>Especie:</h5>
+                <h5>Idade:</h5>
+                <h5>Serviços feitos:</h5>
+            </div>
+        </div>
+    </div>
+</div>
 @if($animais->isNotEmpty())
     Animais: <br>
     <table border="1px solid" style="text-align: center;">

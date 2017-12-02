@@ -25,9 +25,7 @@ header{
     }
 
 }
-/* LOGO */
-.logo {
-    background: url(img/logo-preta.svg);
-    background: fixed;
+.brand-logo{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-
