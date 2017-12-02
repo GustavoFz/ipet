@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" style="overflow-y:auto">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!--Let browser know website is optimized for mobile-->
@@ -25,13 +25,13 @@
                 <a class="white-text modal-trigger" href="#modal-servico">Solicitar Serviços</a>
             </li>
             <li>
-                <a class="waves-effect waves-light btn modal-trigger white yellow-text" href="#modal-login">Entrar</a>
+                <a class="waves-effect waves-light btn modal-trigger white grey-text" href="#modal-login">Entrar</a>
             </li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav black">
             <li>
-                <a class="waves-effect waves-light btn modal-trigger white yellow-text" href="#modal-login">Login</a>
+                <a class="waves-effect waves-light btn modal-trigger white grey-text" href="#modal-login">Login</a>
             </li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse  ">
