@@ -6,20 +6,6 @@
 </div>
 <!-- /Botão add -->
 
-<div class="row">
-    <div class="col m5">
-        <div class="card">
-            <div class="card-image">
-                <img src="img/logo-preta.svg" style="height: 100px">
-                <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-                <p>Scoob</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="col s5">
     <h2 class="header">Meu animais</h2>
     <div class="card horizontal">
