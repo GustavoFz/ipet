@@ -69,6 +69,11 @@
         <!-- Menu Opções -->
         <li class="no-padding">
             <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <a class="collapsible-header waves-effect waves-light btn grey white-text modal-trigger"
+                       href="#modal-servico">Solicitar Serviço</a>
+                </li>
+
                 <li class="bold">
                     <a class="collapsible-header waves-effect waves-cyan active">
                         <i class="material-icons">star</i>
@@ -117,7 +122,89 @@
             <!-- /Barra de Carregamento -->
             <div id="conteudo-home" class="col s12">
 
-                sasasasasasasas
+                <div class="parallax-container">
+                    <div class="parallax">
+                        <img src="img/banho.jpg">
+                    </div>
+                </div>
+                <div class="section black">
+                    <div class="row">
+                        <div class="col m4">
+                            <h2 class="header white-text">Banho</h2>
+                        </div>
+                        <div class="col m8">
+                            <div class="12">
+                                <p class="grey-text text-darken-3 lighten-3">
+                                    Parallax is an effect where the background content or image in this
+                                    case, is moved at a different speed than the foreground content while scrolling.
+                                </p>
+                            </div>
+                            <div class="col m12 center">
+
+                                <a class="waves-effect waves-light btn white black-text modal-trigger"
+                                   href="#modal-servico">Solicitar</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="parallax-container">
+                    <div class="parallax"><img src="img/tosa.jpg"></div>
+                </div>
+                <div class="section black">
+                    <div class="row">
+
+                        <div class="col m8">
+                            <div class="12">
+                                <p class="grey-text text-darken-3 lighten-3">
+                                    Parallax is an effect where the background content or image in this
+                                    case, is moved at a different speed than the foreground content while scrolling.
+                                </p>
+                            </div>
+                            <div class="col m12 center">
+
+                                <a class="waves-effect waves-light btn white black-text modal-trigger"
+                                   href="#modal-servico">Solicitar</a>
+
+                            </div>
+                        </div>
+
+                        <div class="col m4">
+                            <h2 class="header white-text right-align">Tosa</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="container">
+
+                        <div class="col m12 center">
+                            <h2>Livre Pet</h2>
+                        </div>
+
+                    </div>
+                    <div class="section grey" style="background: url(img/banho.jpg) no-repeat;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col l8 col-lg-offset-4 m12">
+                                    <div class="col m12 white-text" style="margin-bottom: 10px">
+                                        <h3 class="black-text">Nós buscamos seu pet e o levamos para realizar os
+                                            principais....(pensar em um texto bom)!</h3>
+                                    </div>
+                                    <div class="m12">
+                                        <div class="center">
+                                            <a class="waves-effect waves-light btn black white-text modal-trigger"
+                                               href="#modal-servico">Solicitar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -151,8 +238,8 @@
                         <label for="idade">Idade</label>
                     </div>
 
-                        <input id="id_user" name="id_user" type="hidden" value="1">
-                        {{--Deixar assim depois da autenticação <input id="id_user" name="id_user" type="hidden" value="{{user->id}}"> --}}
+                    <input id="id_user" name="id_user" type="hidden" value="1">
+                    {{--Deixar assim depois da autenticação <input id="id_user" name="id_user" type="hidden" value="{{user->id}}"> --}}
                 </div>
                 <div class="row">
                     <div class="col s12">
@@ -173,22 +260,21 @@
 <div id="modal-servico" class="modal">
     <div class="modal-content">
         <div id="login" class="col s12">
-            <h4 class="center-align">Escolha um ou mais serviços:</h4>
+            <h4 class="center-align">Escolha o serviço desejado</h4>
             <form class="" action="" method="post">
                 {{ csrf_field() }}
                 <div class="row">
+
                     <p>
                         <input type="checkbox" id="opcao1"/>
                         <label for="opcao1">Banho</label>
                     </p>
+
                     <p>
                         <input type="checkbox" id="opcao2"/>
                         <label for="opcao2">Tosa</label>
                     </p>
-                    <p>
-                        <input type="checkbox" id="opcao3"/>
-                        <label for="opcao3">Vacina</label>
-                    </p>
+
                 </div>
                 <div class="row">
                     <div class="input-field col s12">

@@ -1,6 +1,6 @@
 <!-- Botão add -->
 <div class="fixed-action-btn horizontal">
-    <a class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="#modal-animal">
+    <a class="btn-floating btn-large waves-effect waves-light black modal-trigger" href="#modal-animal">
         <i class="large material-icons">add</i>
     </a>
 </div>
