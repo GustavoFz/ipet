@@ -37,13 +37,13 @@
     <!-- Barra Lateral -->
     <ul id="nav-mobile" class="side-nav fixed">
         <!-- Perfil -->
-        <li class="red darken-2">
+        <li class="black">
             <div class="row">
                 <div class="col s4 m4 l4" style="padding-top: 15px">
                     <img src="img/perfil.svg" class="circle cyan">
                 </div>
                 <div class="col s8 m8 l8" style="padding-top: 30px">
-                    <a class="btn-flat dropdown-button waves-effect waves-light black-text white" href="#"
+                    <a class="btn-flat dropdown-button waves-effect waves-light grey-text white" href="#"
                        data-activates="profile-dropdown-nav">
                         Andrhé
                         <i class="material-icons right">keyboard_arrow_down</i>

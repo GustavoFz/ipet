@@ -33,6 +33,9 @@
             <li>
                 <a class="waves-effect waves-light btn modal-trigger white grey-text" href="#modal-login">Login</a>
             </li>
+            <li>
+                <a class="white-text modal-trigger" href="#modal-servico">Solicitar Serviços</a>
+            </li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse  ">
             <i class="material-icons white-text">menu
