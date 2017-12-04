@@ -1,6 +1,5 @@
 /* Navbar*/
 
-
 /* BARRA DE CARREGAME */
 
 body {
@@ -8,24 +7,33 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+/* responsividade tela HOME (NÃO MEXER PELO AMOR DE DEUS (DEU UM PUTA TRABALHO)) */
+@media only screen and (min-width: 992px) {
+    main {
+        flex: 1 0 auto;
+        padding-left: 300px;
+    }
 
-main {
-    flex: 1 0 auto;
-    padding-left: 300px;
+    header {
+        padding-left: 300px;
+    }
+    nav{
+        padding-left: 300px;
+    }
 }
-header{
-    padding-left: 300px;
-}
+
 @media only screen and (max-width: 600px) {
-    .main{
+    .main {
         padding-left: 0;
     }
-    .header{
+
+    .header {
         padding-left: 0;
     }
 
 }
-.brand-logo{
+
+.brand-logo {
     margin-top: 5px;
     margin-bottom: 5px;
 }

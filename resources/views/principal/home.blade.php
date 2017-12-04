@@ -17,18 +17,27 @@
 <body>
 
 <header>
-    <div class="container">
-        <a href="#" data-activates="nav-mobile"
-           class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
-            <i class="material-icons">menu</i>
-        </a>
-    </div>
+
     <!-- Barra Principal -->
-    <!--
+
     <nav class="top-nav red darken-2">
+        <!--
+        <div class="container">
+            <a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+        -->
+        <div class="fixed-action-btn horizontal">
+            <a href="#" data-activates="nav-mobile" class="btn-floating btn-large red button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
         <div class="container">
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo center">IPet</a>
+                <a id="logo-container" href="/home" class="brand-logo">
+                    <img src="img/logo-branca.svg" style="height:55px">
+                </a>
             </div>
         </div>
     </nav>
