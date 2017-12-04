@@ -165,7 +165,11 @@
                 <div class="section black">
                     <div class="row">
 
-                        <div class="col m8">
+                        <div class="col m4 push-m8">
+                            <h2 class="header white-text right-align">Tosa</h2>
+                        </div>
+
+                        <div class="col m8 pull-m4">
                             <div class="12">
                                 <p class="grey-text text-darken-3 lighten-3">
                                     Parallax is an effect where the background content or image in this
@@ -178,10 +182,6 @@
                                    href="#modal-servico">Solicitar</a>
 
                             </div>
-                        </div>
-
-                        <div class="col m4">
-                            <h2 class="header white-text right-align">Tosa</h2>
                         </div>
 
                     </div>
