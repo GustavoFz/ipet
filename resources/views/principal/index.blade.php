@@ -111,7 +111,7 @@
         </div>
         <div class="col m8">
             <div class="12">
-                <p class="grey-text text-darken-3 lighten-3">
+                <p class="white-text lighten-3">
                     Seu Pet se exercitando sem você precisar sair de casa, uma tarde de diverão para seu Pet.
                 </p>
             </div>

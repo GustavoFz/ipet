@@ -6,52 +6,29 @@
 </div>
 <!-- /Botão add -->
 
-<div class="col s5">
-    <h2 class="header">Meu animais</h2>
-    <div class="card horizontal">
-        <div class="card-image">
-            <img src="https://lorempixel.com/100/190/nature/6">
-        </div>
-        <div class="card-stacked">
-            <div class="card-content">
-                <h5>Nome:</h5>
-                <h5>Especie:</h5>
-                <h5>Idade:</h5>
-                <h5>Serviços feitos:</h5>
+
+@if($animais->isNotEmpty())
+    @foreach($animais as $animal)
+        <div class="col s4">
+            <h2 class="header">Meu animais</h2>
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="https://lorempixel.com/100/190/nature/6">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>Id: {{$animal->id}}</h5>
+                        <h5>Nome: {{$animal->nome}}</h5>
+                        <h5>Especie: {{$animal->especie}}</h5>
+                        <h5>Idade:{{$animal->idade}}</h5>
+                        <h5>Dono: {{$animal->user->nome}}</h5>
+                        <h5>Serviços feitos:</h5>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-@if($animais->isNotEmpty())
-    Animais: <br>
-    <table border="1px solid" style="text-align: center;">
-        <thead>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Espécie</th>
-        <th>Idade</th>
-        <th>Dono</th>
-        <th>Ação</th>
-        </thead>
-        @foreach($animais as $animal)
-            <tbody>
-            <td>{{$animal->id}}</td>
-            <td>{{$animal->nome}}</td>
-            <td>{{$animal->especie}}</td>
-            <td>{{$animal->idade}}</td>
-            <td>{{$animal->user->nome}}</td>
-            <td>
-                <a href="{{route('animal.show.one', $animal->id)}}">Ver detalhes</a> <br>
-                <form action="{{route('animal.update', $animal->id)}}" method="POST">
-                    <button type="submit">Editar animal</button>
-                </form>
-            </td>
-            </tbody>
-        @endforeach
-    </table>
-
+    @endforeach
 @else
-    <br>
     Animais: Não há animais<br>
 @endif
 

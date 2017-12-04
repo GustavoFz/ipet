@@ -15,6 +15,7 @@ Route::get('/', function () {return view('welcome');} );
 Route::get('/index', function () {return view('principal.index');} );
 Route::get('/home', function () {return view('principal.home');} );
 Route::get('/cadastro', function () {return view('conteudo.cadastro-animal');} );
+Route::get('/perfil', function () {return view('conteudo.perfil');} );
 
 /*ROTAS DE USUÁRIO*/
 Route::post('/user/save',['as'=>'user.save','uses'=>'UserController@save']);
