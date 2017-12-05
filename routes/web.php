@@ -41,7 +41,6 @@ Route::get('/servico/show/{id}',['as'=>'servico.show.one','uses'=>'ServicoContro
 Route::post('/servico/update/{id}',['as'=>'servico.update','uses'=>'ServicoController@update']);
 Route::get('/servico/delete/{id}',['as'=>'servico.delete','uses'=>'ServicoController@delete']);
 
-
+/*Rota de login*/
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

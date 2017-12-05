@@ -132,7 +132,7 @@
     <div class="modal-content">
         <div id="login" class="col s12">
             <h4 class="center-align">Login</h4>
-            <form action="" method="post">
+            <form action="{{ route('login') }}" method="post">
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="input-field col s12">
@@ -150,7 +150,7 @@
                 </div>
                 <div class="row">
                     <div class="col s6">
-                        <a class="btn waves-effect waves-light yellow black-text" href="/registro">Registrar</a>
+                        <a class="btn waves-effect waves-light yellow black-text" href="/register">Registrar</a>
                     </div>
 
                     <div class="col s6">
