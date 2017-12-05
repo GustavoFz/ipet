@@ -8,9 +8,10 @@
 
 
 @if($animais->isNotEmpty())
+            <h2 class="header">Meu animais</h2>
+
     @foreach($animais as $animal)
         <div class="col s4">
-            <h2 class="header">Meu animais</h2>
             <div class="card horizontal">
                 <div class="card-image">
                     <img src="https://lorempixel.com/100/190/nature/6">

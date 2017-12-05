@@ -237,7 +237,7 @@
                         <i class="material-icons prefix">person</i>
                         <select name="especie">
                             <option value="" disabled selected>Especie</option>
-                            <option value="cachorro">Cachoroo</option>
+                            <option value="cachorro">Cachorro</option>
                             <option value="gato">Gato</option>
                         </select>
                     </div>
