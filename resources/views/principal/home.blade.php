@@ -54,7 +54,11 @@
                 <div class="col s8 m8 l8" style="padding-top: 30px">
                     <a class="btn-flat dropdown-button waves-effect waves-light grey-text white" href="#"
                        data-activates="profile-dropdown-nav">
-                        Andrhé
+                         @if(Auth::guest())
+                        Visitante
+                        @else
+                        {{Auth::user()->name}}
+                        @endif
                         <i class="material-icons right">keyboard_arrow_down</i>
                     </a>
                     <ul id="profile-dropdown-nav" class="dropdown-content"
@@ -65,9 +69,14 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="grey-text text-darken-1">
+                            <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();" class="grey-text text-darken-1">
                                 <i class="material-icons">keyboard_tab</i>Logout
                             </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form></li>
                         </li>
                     </ul>
                 </div>

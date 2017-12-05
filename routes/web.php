@@ -1,21 +1,15 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+/*Rotas do site*/
 Route::get('/', function () {return view('welcome');} );
 Route::get('/index', function () {return view('principal.index');} );
-Route::get('/home', function () {return view('principal.home');} );
-Route::get('/cadastro', function () {return view('conteudo.cadastro-animal');} );
-Route::get('/perfil', function () {return view('conteudo.perfil');} );
+
+
+Route::group(['middleware'=>'auth'],function(){
+	
+	/*DASHBOARD*/
+	Route::get('/home', function () {return view('principal.home');} );
+
 
 /*ROTAS DE USUÁRIO*/
 Route::post('/user/save',['as'=>'user.save','uses'=>'UserController@save']);
@@ -24,6 +18,9 @@ Route::get('/users',['as'=>'users','uses'=>'UserController@show']);
 Route::get('/user/show/{id}',['as'=>'user.show.one','uses'=>'UserController@showOne']);
 Route::post('/user/update/{id}',['as'=>'user.update','uses'=>'UserController@update']);
 Route::get('/user/delete/{id}',['as'=>'user.delete','uses'=>'UserController@delete']);
+
+Route::get('/cadastro', function () {return view('conteudo.cadastro-animal');} );
+Route::get('/perfil', function () {return view('conteudo.perfil');} );
 
 /*ROTAS DE ANIMAL*/
 Route::post('/animal/save',['as'=>'animal.save','uses'=>'AnimalController@save']);
@@ -40,7 +37,7 @@ Route::get('/servicos',['as'=>'servicos','uses'=>'ServicoController@show']);
 Route::get('/servico/show/{id}',['as'=>'servico.show.one','uses'=>'ServicoController@showOne']);
 Route::post('/servico/update/{id}',['as'=>'servico.update','uses'=>'ServicoController@update']);
 Route::get('/servico/delete/{id}',['as'=>'servico.delete','uses'=>'ServicoController@delete']);
-
+});
 /*Rota de login*/
 Auth::routes();
 
