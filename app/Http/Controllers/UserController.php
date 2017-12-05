@@ -21,7 +21,7 @@ class UserController extends Controller
     	}
 
 	public function show(){
-		
+		$this->authorize('view', User::class);
 		$users = User::all();
 		return view('users', compact('users'));
     }

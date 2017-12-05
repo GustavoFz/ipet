@@ -10,14 +10,13 @@ class User extends Authenticatable
 {
     use Notifiable;
     use HasRolesAndAbilities;
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'nome', 'email', 'password', 'cpf', 'sexo', 'telefone', 'celular', 'nascimento'
+        'nome', 'email', 'password', 'cpf', 'sexo', 'telefone', 'celular', 'nascimento', 'name'
     ];
 
     /**
@@ -34,10 +33,15 @@ class User extends Authenticatable
     //O usuario pode ter varios animais
     public function animais(){
       return $this->hasMany(Animal::class, 'id_user', 'id');
-    }
+  }
 
-    public function servicos(){
+  public function servicos(){
       return $this->hasMany(Servico::class, 'id_user', 'id');
-    }
+  }
+
+  public function habilidades()
+  {
+      return $this->getAbilities();
+  }
 
 }
