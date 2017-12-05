@@ -8,7 +8,7 @@
 
 
 @if($animais->isNotEmpty())
-            <h2 class="header">Meu animais</h2>
+    <h2 class="header">Meu animais</h2>
 
     @foreach($animais as $animal)
         <div class="col s4">
@@ -18,12 +18,12 @@
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
-                        <h5>Id: {{$animal->id}}</h5>
+                        {{--<h5>Id: {{$animal->id}}</h5>--}}
                         <h5>Nome: {{$animal->nome}}</h5>
                         <h5>Especie: {{$animal->especie}}</h5>
                         <h5>Idade:{{$animal->idade}}</h5>
-                        <h5>Dono: {{$animal->user->nome}}</h5>
-                        <h5>Serviços feitos:</h5>
+                        <h5>Dono: {{$animal->user->name}}</h5>
+                        <h5>Serviços feitos: {{$animal->servicos->count()}}</h5>
                     </div>
                 </div>
             </div>
