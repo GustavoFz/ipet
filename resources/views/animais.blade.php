@@ -23,7 +23,7 @@
                                 <br>
                                 @forelse($animal->servicos as $servico)
                                     <ul class="collection">
-                                        <li class="collection-item">{{$loop->iteration}} /</li>
+                                        <li class="collection-item">{{$loop->iteration}} / {{$servico->status}}</li>
                                     </ul>
                                 @empty
                                     Não há servicos
