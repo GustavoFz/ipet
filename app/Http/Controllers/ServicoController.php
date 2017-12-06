@@ -21,7 +21,7 @@ class ServicoController extends Controller
 
 	public function save(Request $req){
         $dados = $req->all();
-        $dados['status'] => 'PENDENTE';
+        //$dados['status'] => 'PENDENTE';
 
         $idServico = Servico::create($dados);
         dd($idServico);
