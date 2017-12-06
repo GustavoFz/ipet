@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" style="overflow-y:auto"  class="">
+<html lang="pt-br" style="overflow-y:auto" class="">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!--Let browser know website is optimized for mobile-->
@@ -81,7 +81,8 @@
         <div class="col m8">
             <div class="12">
                 <p class="grey-text text-darken-3 lighten-3 left-align">
-                    Nos dias quentes, nada melhor que não se preoculpar se seu pet está passnado calor devido ao pelo grande.
+                    Nos dias quentes, nada melhor que não se preoculpar se seu pet está passnado calor devido ao pelo
+                    grande.
                 </p>
             </div>
             <div class="col m12 center">
@@ -128,7 +129,7 @@
 
 <!-- Estrutura dos Modais -->
 <!-- Modal Login -->
-<div id="modal-login" class="modal">
+<div id="modal-login" class="modal" style="overflow-y: hidden">
     <div class="modal-content">
         <div id="login" class="col s12">
             <h4 class="center-align">Login</h4>
@@ -168,25 +169,25 @@
 <!-- /Modal Login -->
 
 <!-- Modal Serviço -->
-<div id="modal-servico" class="modal">
+<div id="modal-servico" class="modal" style="overflow-y: hidden">
     <div class="modal-content">
         <div id="login" class="col s12">
             <h4 class="center-align">Escolha o serviço desejado</h4>
             <form class="" action="" method="post">
                 {{ csrf_field() }}
+
                 <div class="row">
-
-                    <p>
-                        <input type="checkbox" id="opcao1"/>
-                        <label for="opcao1">Banho</label>
-                    </p>
-
-                    <p>
-                        <input type="checkbox" id="opcao2"/>
-                        <label for="opcao2">Tosa</label>
-                    </p>
-
+                    <div class="input-field col s12">
+                        <select>
+                            <option value="" disabled selected>--</option>
+                            <option value="1">Banho</option>
+                            <option value="2">Tosa</option>
+                            <option value="3">Sport-Pet</option>
+                        </select>
+                        <label>Escolha um Serviço</label>
+                    </div>
                 </div>
+
                 <div class="row">
                     <div class="input-field col s12">
                         <textarea id="textarea1" class="materialize-textarea"></textarea>
