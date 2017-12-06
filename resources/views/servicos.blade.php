@@ -12,23 +12,13 @@
 
             @foreach(Auth::user()->servicos as $servico)
             <li>
-            <div class="collapsible-header"><i class="material-icons">pets</i>{{$servico->status}}</div>
+            <div class="collapsible-header"><i class="material-icons">pets</i>{{$servico->animal->nome}} - {{$servico->status}}</div>
                 <div class="collapsible-body">
-                    <span><b>Nome: </b>{{$animal->nome}}</span> <br>
-                    <span><b>Idade: </b>{{$animal->idade}}</span> <br>
-                    <span><b>Espécie: </b>{{$animal->especie}}</span> <br>
-                    @if($animal->servicos->isNotEmpty())
-                        <span><b>Serviços: </b> Esse animal já foi atendido {{$animal->servicos->count()}} vezes</span> <br>
-                        @forelse($animal->servicos as $servico)
-                            <ul class="collection">
-                              <li class="collection-item">{{$loop->iteration}} / </li>
-                            </ul>
-                        @empty
-                            Não há servicos
-                        @endforelse
-                    @else
-                        Não há serviços
-                    @endif
+                    <span><b>Usuário: </b>{{$servico->user->name}}</span> <br>
+                    <span><b>Animal atendido: </b>{{$servico->animal->nome}}</span> <br>
+                    @foreach($servico->atendimentos() as $atendimento)
+                        {{$atendimento}}
+                    @endforeach
                 </div>
             </li>
             @endforeach
