@@ -56,5 +56,6 @@ $('.datepicker').pickadate({
     labelMonthSelect: 'Selecione um mês',
     labelYearSelect: 'Selecione um ano',
     selectMonths: true,
-    selectYears: 15
+    selectYears: 15,
+    format:'yyyy-mm-dd'
 });
