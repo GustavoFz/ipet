@@ -283,10 +283,10 @@
                 <input type="hidden" name="id_user" value="{{Auth::id()}}">
 
                 @if(Auth::user()->animais()->count() > 0)
-                    <select>
+                    <select name="id_animal">
                         <option disabled selected value="">Escolha o animal</option>
                         @foreach(Auth::user()->animais as $animal)
-                        <option value="">{{$animal->nome}}</option>
+                        <option value="{{$animal->id}}">{{$animal->nome}}</option>
                         @endforeach                    
                     </select>
                 @endif

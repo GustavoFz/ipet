@@ -15,21 +15,19 @@ class ServicoController extends Controller
     	// IMPLEMENTAR PARA PEGAR O ID DO DONO DO CACHORRO AUTOMATICAMENTE
     	// EXEMPLO, "id_user = Cachorro->id_user", ja pega o dono do cachorro pelo id do cachorro
     	// Já que a tabela cachorro ja armazena essa informação do user
-	$dados = [
-		'tipo'=>'Cortar unha',
-		'id_user'=>1,
-		'id_animal'=>1,
-		'status'=>'PENDENTE',
-	];
 	//dd($dados);
 	Servico::create($dados);
 	}
 
 	public function save(Request $req){
         $dados = $req->all();
-        dd($dados, $req);
-        Servico::create($dados);
-        Servico_Ponte_TipoServico::create($dados);
+        $dados['status'] => 'PENDENTE';
+
+        $idServico = Servico::create($dados);
+        dd($idServico);
+        Servico_Ponte_TipoServico::create([
+
+        ]);
         }
 
 	public function show(){
