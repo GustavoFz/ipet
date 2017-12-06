@@ -51,6 +51,19 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'cpf' => 'required',
+            'sexo' => 'required',
+            'nascimento' => 'required',
+        ], [
+            'name.required' => 'Informe seu nome!',
+            'email.required' => 'Informe seu endereço de e-mail!',
+            'email.unique' => 'Esse endereço já está cadastrado!',
+            'password.required' => 'Digite sua senha!',
+            'password.min' => 'Sua senha deve ter pelo menos 6 caracteres!',
+            'password.confirmed' => 'A senha deve ser igual à confirmação!',
+            'cpf.required' => 'Informe seu CPF!',
+            'sexo.required' => 'Informe seu sexo!',
+            'nascimento.required' => 'Informe sua data de nascimento!',
         ]);
     }
 
