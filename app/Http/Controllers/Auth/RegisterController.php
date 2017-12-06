@@ -57,7 +57,7 @@ class RegisterController extends Controller
         ], [
             'name.required' => 'Informe seu nome!',
             'email.required' => 'Informe seu endereço de e-mail!',
-            'email.unique' => 'Esse endereço já está cadastrado!',
+            'email.unique' => 'Esse e-mail já está cadastrado!',
             'password.required' => 'Digite sua senha!',
             'password.min' => 'Sua senha deve ter pelo menos 6 caracteres!',
             'password.confirmed' => 'A senha deve ser igual à confirmação!',
