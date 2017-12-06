@@ -21,13 +21,21 @@ class ServicoController extends Controller
 
 	public function save(Request $req){
         $dados = $req->all();
-        //$dados['status'] => 'PENDENTE';
+        $dados['status'] = 'PENDENTE';
+        $servicos = TipoServico::all();
 
         $idServico = Servico::create($dados);
-        dd($idServico);
-        Servico_Ponte_TipoServico::create([
+        //dd($idServico, $idServico->id, $dados);
+        foreach($servicos as $servico){
+        	if(isset($dados[$servico->tipo])){
+        		Servico_Ponte_TipoServico::create([
+        			'id_servico' => $idServico->id,
+        			'id_tipoServico' => $servico->id
+        		]);
+        	}
+        }
 
-        ]);
+        return redirect()->back();
         }
 
 	public function show(){

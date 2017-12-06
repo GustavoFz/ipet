@@ -8,6 +8,9 @@ use App\TipoServico;
 
 class Servico_Ponte_TipoServico extends Model
 {
+	protected $fillable = [
+		'id_servico', 'id_tipoServico',
+	];
 
 	public function servico(){
 		return $this->hasOne(Servico::class,'id', 'id_servico');
