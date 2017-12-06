@@ -35,7 +35,7 @@
         </div>
         <div class="container">
             <div class="nav-wrapper">
-                <a id="logo-container" href="/home" class="brand-logo">
+                <a id="logo-container" href="/home" class="brand-logo center">
                     <img src="img/logo-branca.svg" style="height:55px">
                 </a>
             </div>
