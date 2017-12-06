@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Carbon\Carbon;
 
 class RegisterController extends Controller
 {
@@ -47,12 +48,12 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'cpf' => 'required',
-            'sexo' => 'required',
             'nascimento' => 'required',
         ], [
             'name.required' => 'Informe seu nome!',
@@ -62,7 +63,6 @@ class RegisterController extends Controller
             'password.min' => 'Sua senha deve ter pelo menos 6 caracteres!',
             'password.confirmed' => 'A senha deve ser igual à confirmação!',
             'cpf.required' => 'Informe seu CPF!',
-            'sexo.required' => 'Informe seu sexo!',
             'nascimento.required' => 'Informe sua data de nascimento!',
         ]);
     }
@@ -82,14 +82,21 @@ class RegisterController extends Controller
               $data['sexo'] = "Masculino";
             }
 
+            if(!isset($data['celular'])){
+              $data['celular'] = "";
+            }
+
+            if(!isset($data['telefone'])){
+              $data['telefone'] = "";
+            }
+
+        $data['nascimento'] = Carbon::parse($data['nascimento']);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'cpf' => $data['cpf'],
             'sexo' => $data['sexo'],
-            'telefone' => $data['telefone'],
-            'celular' => $data['celular'],
             'nascimento' => $data['nascimento'],
         ]);
     }
