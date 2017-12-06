@@ -27,8 +27,9 @@ class ServicoController extends Controller
 
 	public function save(Request $req){
         $dados = $req->all();
-        //dd($dados);
+        dd($dados, $req);
         Servico::create($dados);
+        Servico_Ponte_TipoServico::create($dados);
         }
 
 	public function show(){

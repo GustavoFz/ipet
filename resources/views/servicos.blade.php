@@ -12,7 +12,6 @@
         <th>ID</th>
         <th>Tipo</th>
         <th>Animal atendido</th>
-        <th>Solicitante</th>
         <th>Status</th>
         <th>Ação</th>
         </thead>
@@ -21,7 +20,6 @@
             <td>{{$servico->id}}</td>
             <td>{{$servico->tipo}}</td>
             <td>{{$servico->animal->nome}}</td>
-            <td>{{$servico->user->nome}}</td>
             <td>{{$servico->status}}</td>
             <td>
                 <a href="{{route('servico.show.one', $servico->id)}}">Ver detalhes</a> <br>

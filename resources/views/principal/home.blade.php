@@ -279,20 +279,25 @@
     <div class="modal-content">
         <div id="login" class="col s12">
             <h4 class="center-align">Escolha o serviço desejado</h4>
-            <form class="" action="" method="post">
+            <form class="" action="{{route('servico.save')}}" method="post">
+                <input type="hidden" name="id_user" value="{{Auth::id()}}">
+
+                @if(Auth::user()->animais()->count() > 0)
+                    <select>
+                        <option disabled selected value="">Escolha o animal</option>
+                        @foreach(Auth::user()->animais as $animal)
+                        <option value="">{{$animal->nome}}</option>
+                        @endforeach                    
+                    </select>
+                @endif
                 {{ csrf_field() }}
                 <div class="row">
-
-                    <p>
-                        <input type="checkbox" id="opcao1"/>
-                        <label for="opcao1">Banho</label>
-                    </p>
-
-                    <p>
-                        <input type="checkbox" id="opcao2"/>
-                        <label for="opcao2">Tosa</label>
-                    </p>
-
+                    @foreach($tipos as $tipo)
+                        <p>
+                            <input type="checkbox" name="{{$tipo->tipo}}" id="{{$tipo->tipo}}" value="{{$tipo->tipo}}" />
+                            <label for="{{$tipo->tipo}}">{{$tipo->tipo}}</label>
+                        </p>
+                    @endforeach
                 </div>
                 <div class="row">
                     <div class="input-field col s12">

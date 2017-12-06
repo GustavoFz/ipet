@@ -21,4 +21,8 @@ class Servico extends Model
 	public function atendimentos(){
 		return $this->hasMany(Servico_Ponte_TipoServico::class,'id_servico', 'id');
 	}
+
+	public function data(){
+		return "dataTESTE";
+	}
 }

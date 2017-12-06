@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\TipoServico;
+use App\Animal;
+use App\User;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -22,7 +26,9 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('home');
+    {   
+
+        $tipos = TipoServico::all();
+        return view('principal.home', compact('tipos'));
     }
 }

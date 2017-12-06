@@ -11,8 +11,9 @@ Route::get('/roles/setup',['uses'=>'RoleController@setup']);
 
 Route::group(['middleware'=>'auth'],function(){
 	
-	/*DASHBOARD*/
-	Route::get('/home', function () {return view('principal.home');} );
+/*DASHBOARD*/
+Route::get('/home',['uses'=>'HomeController@index']);
+Route::get('/homess', function () {return view('principal.home');} );
 
 
 /*ROTAS DE USUÁRIO*/
