@@ -35,9 +35,6 @@
 
 <body>
 
-<header>
-
-   
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -52,7 +49,8 @@
                             <label for="name" class="col-md-4 control-label">Nome</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}"
+                                       required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -66,7 +64,8 @@
                             <label for="email" class="col-md-4 control-label">E-Mail</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control" name="email"
+                                       value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -91,18 +90,19 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirmar senha</label>
+                            <label for="password-confirm" class="col-md-4 control-label">Confirmar Senha</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control"
+                                       name="password_confirmation" required>
                             </div>
                         </div>
 
                         <div class="form-group{{ $errors->has('cpf') ? ' has-error' : '' }}">
-                            <label for="cpf" class="col-md-4 control-label">cpf</label>
+                            <label for="cpf" class="col-md-4 control-label">CPF</label>
 
                             <div class="col-md-6">
-                                <input id="cpf" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}" >
+                                <input id="cpf" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}">
 
                                 @if ($errors->has('cpf'))
                                     <span class="help-block">
@@ -113,10 +113,11 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('nascimento') ? ' has-error' : '' }}">
-                            <label for="nascimento" class="col-md-4 control-label">nascimento</label>
+                            <label for="nascimento" class="col-md-4 control-label">Data de Nascimento</label>
 
                             <div class="col-md-6">
-                                 <input type="date" name="nascimento" placeholder="dd/mm/aaaa" required="required" class="datepicker" required autofocus>
+                                <input type="date" name="nascimento" placeholder="dd/mm/aaaa" required="required"
+                                       class="datepicker" required autofocus>
 
                                 @if ($errors->has('nascimento'))
                                     <span class="help-block">
@@ -137,10 +138,11 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('telefone') ? ' has-error' : '' }}">
-                            <label for="telefone" class="col-md-4 control-label">telefone</label>
+                            <label for="telefone" class="col-md-4 control-label">Telefone</label>
 
                             <div class="col-md-6">
-                                <input id="telefone" type="text" class="form-control" name="telefone" value="{{ old('telefone') }}">
+                                <input id="telefone" type="text" class="form-control" name="telefone"
+                                       value="{{ old('telefone') }}">
 
                                 @if ($errors->has('telefone'))
                                     <span class="help-block">
@@ -151,10 +153,11 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('celular') ? ' has-error' : '' }}">
-                            <label for="celular" class="col-md-4 control-label">celular</label>
+                            <label for="celular" class="col-md-4 control-label">Celular</label>
 
                             <div class="col-md-6">
-                                <input id="celular" type="text" class="form-control" name="celular" value="{{ old('celular') }}">
+                                <input id="celular" type="text" class="form-control" name="celular"
+                                       value="{{ old('celular') }}">
 
                                 @if ($errors->has('celular'))
                                     <span class="help-block">
@@ -183,16 +186,6 @@
 <script type="text/javascript" src="js/materialize.js"></script>
 <!-- Custom Script -->
 <script src="js/init.js"></script>
-<script type="text/javascript">
-    $('.datepicker').pickadate({
-        selectMonths: true, // Creates a dropdown to control month
-        selectYears: 15, // Creates a dropdown of 15 years to control year,
-        today: 'Hoje',
-        clear: 'Limpar',
-        close: 'Ok',
-        closeOnSelect: true, // Close upon selecting a date,
-        format: 'yyyy-mm-dd'
-    });
-    </script>
+
 </body>
 </html>
