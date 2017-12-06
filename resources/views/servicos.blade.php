@@ -5,7 +5,7 @@
     </a>
 </div>
 <!-- /Botão add -->
-@if($servicos->isNotEmpty())
+@if(Auth::user()->servicos()->count() > 0)
     Serviços: <br>
     <table border="1px solid" style="text-align: center;">
         <thead>
@@ -15,7 +15,7 @@
         <th>Status</th>
         <th>Ação</th>
         </thead>
-        @foreach($servicos as $servico)
+        @foreach(Auth::user()->servicos as $servico)
             <tbody>
             <td>{{$servico->id}}</td>
             <td>{{$servico->tipo}}</td>
