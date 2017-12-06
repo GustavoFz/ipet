@@ -16,8 +16,9 @@
                 <div class="collapsible-body">
                     <span><b>Usuário: </b>{{$servico->user->name}}</span> <br>
                     <span><b>Animal atendido: </b>{{$servico->animal->nome}}</span> <br>
-                    @foreach($servico->atendimentos() as $atendimento)
-                        {{$atendimento}}
+                    <span><b>Serviços feitos: </b></span> <br>
+                    @foreach($servico->atendimentos as $atendimento)
+                        {{$atendimento->tipo->tipo}}
                     @endforeach
                 </div>
             </li>
