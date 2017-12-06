@@ -25,7 +25,11 @@
                 <a class="white-text modal-trigger" href="#modal-servico">Solicitar Serviços</a>
             </li>
             <li>
+                @if(Auth::guest())
                 <a class="waves-effect waves-light btn modal-trigger white grey-text" href="#modal-login">Entrar</a>
+                @else
+                <a class="waves-effect waves-light btn modal-trigger white grey-text" href="#modal-login">{{Auth::user()->name}}</a>
+                @endif
             </li>
         </ul>
 
