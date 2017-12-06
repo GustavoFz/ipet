@@ -256,8 +256,7 @@
                         <label for="idade">Idade</label>
                     </div>
 
-                    <input id="id_user" name="id_user" type="hidden" value="1">
-                    {{--Deixar assim depois da autenticação <input id="id_user" name="id_user" type="hidden" value="{{user->id}}"> --}}
+                    <input id="id_user" name="id_user" type="hidden" value="{{Auth::user()->id}}">
                 </div>
                 <div class="row">
                     <div class="col s12">

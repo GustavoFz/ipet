@@ -36,6 +36,8 @@
                 </ul>
             </div>
         @endforeach
+        @else
+        <h3>Você não tem animais cadastrados!</h3>
     @endif
 </div>
 
