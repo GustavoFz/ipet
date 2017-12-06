@@ -234,7 +234,7 @@
     <div class="modal-content">
         <div id="login" class="col s12">
             <h4 class="center-align">Adicione um Pet</h4>
-            <form action="{{route('animal.save')}}" method="post">
+            <form id="ajax" action="{{route('animal.save')}}" method="post">
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="input-field col s6">

@@ -4,7 +4,7 @@
     });
 })(jQuery);
 // ATIVADOR CAMPO SELECT
-$(document).ready(function() {
+$(document).ready(function () {
     $('select').material_select();
 });
 
@@ -17,7 +17,6 @@ $(document).ready(function () {
     $('.btn_carrega_conteudo').click(function () {
 
         var carrega_url = this.id;
-        carrega_url = carrega_url;
 
         $.ajax({
 
@@ -38,7 +37,7 @@ $(document).ready(function () {
 });
 
 //paralax utilizado na tela index
-$(document).ready(function(){
+$(document).ready(function () {
     $('.parallax').parallax();
 });
 //madal de calendario em PT-BR
@@ -47,7 +46,7 @@ $('.datepicker').pickadate({
     monthsShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
     weekdaysFull: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabádo'],
     weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
-    weekdaysLetter: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
+    weekdaysLetter: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
     today: 'Hoje',
     clear: 'Limpar',
     close: 'Pronto',
@@ -57,5 +56,19 @@ $('.datepicker').pickadate({
     labelYearSelect: 'Selecione um ano',
     selectMonths: true,
     selectYears: 15,
-    format:'dd-mm-yyyy'
+    format: 'dd-mm-yyyy'
 });
+
+
+$('#ajax').submit(function () {
+    var form = $(this);
+    $.post(form.attr('action'),
+        form.serialize(),
+        function (data) {
+            $('#conteudo-home').html(animals);
+        });
+
+    return false;
+});
+
+
