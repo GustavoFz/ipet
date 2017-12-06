@@ -62,10 +62,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+            if(isset($data['sexo']) == "on"){
+              $data['sexo'] = "Feminino";
+            }
+            else {
+              $data['sexo'] = "Masculino";
+            }
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'cpf' => $data['cpf'],
+            'sexo' => $data['sexo'],
+            'telefone' => $data['telefone'],
+            'celular' => $data['celular'],
+            'nascimento' => $data['nascimento'],
         ]);
     }
 }

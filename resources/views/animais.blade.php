@@ -7,29 +7,25 @@
 <!-- /Botão add -->
 
 
-@if($animais->isNotEmpty())
-    <h2 class="header">Meu animais</h2>
 
-    @foreach($animais as $animal)
-        <div class="col s4">
-            <div class="card horizontal">
-                <div class="card-image">
-                    <img src="https://lorempixel.com/100/190/nature/6">
-                </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        {{--<h5>Id: {{$animal->id}}</h5>--}}
-                        <h5>Nome: {{$animal->nome}}</h5>
-                        <h5>Especie: {{$animal->especie}}</h5>
-                        <h5>Idade:{{$animal->idade}}</h5>
-                        <h5>Dono: {{$animal->user->name}}</h5>
-                        <h5>Serviços feitos: {{$animal->servicos->count()}}</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endforeach
-@else
-    Animais: Não há animais<br>
-@endif
+<ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $('.collapsible').collapsible();
+      });
+  </script>
 
